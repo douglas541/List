@@ -1,0 +1,15 @@
+/home/douglas/Documentos/dev/C#/List/bin/Debug/net6.0/List
+/home/douglas/Documentos/dev/C#/List/bin/Debug/net6.0/List.deps.json
+/home/douglas/Documentos/dev/C#/List/bin/Debug/net6.0/List.runtimeconfig.json
+/home/douglas/Documentos/dev/C#/List/bin/Debug/net6.0/List.dll
+/home/douglas/Documentos/dev/C#/List/bin/Debug/net6.0/List.pdb
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/List.csproj.AssemblyReference.cache
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/List.GeneratedMSBuildEditorConfig.editorconfig
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/List.AssemblyInfoInputs.cache
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/List.AssemblyInfo.cs
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/List.csproj.CoreCompileInputs.cache
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/List.dll
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/refint/List.dll
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/List.pdb
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/List.genruntimeconfig.cache
+/home/douglas/Documentos/dev/C#/List/obj/Debug/net6.0/ref/List.dll
