@@ -8,9 +8,9 @@ public class Program
     {
         MyList myList = new MyList();
 
-        myList.EndInsert(1);
-        myList.EndInsert(2);
-        myList.EndInsert(3);
+        myList.BeginningInsertion(1);
+        myList.BeginningInsertion(2);
+        myList.BeginningInsertion(3);
 
         myList.ShowList();
 
@@ -62,7 +62,7 @@ public class MyList
         Console.WriteLine();
     }
 
-    public bool EndInsert(int data)
+    public void EndInsertion(int data)
     {
         var insertNode = new Node();
 
@@ -75,7 +75,6 @@ public class MyList
 
             this.First = insertNode;
             this.Last = insertNode;
-            this.Length++;
         }
         else
         {
@@ -83,9 +82,33 @@ public class MyList
             this.Last.Next = insertNode;
 
             this.Last = insertNode;
-            this.Length++;
         }
 
-        return true;
+        this.Length++;
+    }
+
+    public void BeginningInsertion(int data)
+    {
+        var insertNode = new Node();
+
+        insertNode.Data = data;
+        insertNode.Prev = null;
+
+        if (this.Length == 0)
+        {
+            insertNode.Next = null;
+
+            this.First = insertNode;
+            this.Last = insertNode;
+        }
+        else
+        {
+            insertNode.Next = this.First;
+            this.First.Prev = insertNode;
+
+            this.First = insertNode;
+        }
+
+        this.Length++;
     }
 }
