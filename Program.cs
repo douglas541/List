@@ -13,21 +13,23 @@ public class Program
         // myList.EndInsertion(4);
         // myList.BeginningInsertion(3);
 
-        myList.ShowList();
+        // myList.ShowList();
 
-        // Console.WriteLine(myList.Last.Prev.Data);
-        Console.WriteLine(myList.BeginningRemove());
+        // Console.WriteLine(myList.BeginningRemove());
+        // Console.WriteLine(myList.BeginningRemove());
+        // Console.WriteLine(myList.BeginningRemove());
 
+        // Console.WriteLine(myList.First);
 
-        myList.ShowList();
+        // myList.ShowList();
     }
 }
 
 public class Node
 {
     public int Data { get; set; }
-    public Node? Next { get; set; }
-    public Node? Prev { get; set; }
+    public Node Next { get; set; }
+    public Node Prev { get; set; }
 
     public Node(int Data, Node Next, Node Prev)
     {
@@ -42,8 +44,8 @@ public class Node
 public class MyList
 {
     public int Length { get; set; }
-    public Node? First { get; set; }
-    public Node? Last { get; set; }
+    public Node First { get; set; }
+    public Node Last { get; set; }
 
     public MyList()
     {
@@ -63,7 +65,10 @@ public class MyList
             nodeAux = nodeAux.Next;
         }
 
-        Console.WriteLine();
+        if (this.Length != 0)
+        {
+            Console.WriteLine();
+        }
     }
 
     public void EndInsertion(int data)
@@ -128,7 +133,8 @@ public class MyList
         {
             returnData = this.First.Data;
 
-            this.First.Prev = null;
+            this.First = null;
+            this.Last = null;
         }
         else
         {
@@ -142,6 +148,32 @@ public class MyList
 
         return returnData;
     }
-    
-    
+
+    public int EndRemove()
+    {
+        int returnData = 0;
+
+        if (this.Length == 0)
+        {
+            return -1;
+        }
+        else if (this.Length == 1)
+        {
+            returnData = this.Last.Data;
+
+            this.First = null;
+            this.Last = null;
+        }
+        else
+        {
+            returnData = this.Last.Data;
+
+            this.Last = this.Last.Prev;
+            this.Last.Next = null;
+        }
+
+        this.Length--;
+
+        return returnData;
+    }
 }
