@@ -9,13 +9,17 @@ public class Program
         MyList myList = new MyList();
 
         myList.BeginningInsertion(1);
-        myList.BeginningInsertion(2);
-        myList.BeginningInsertion(3);
+        // myList.BeginningInsertion(2);
+        // myList.EndInsertion(4);
+        // myList.BeginningInsertion(3);
 
         myList.ShowList();
 
         // Console.WriteLine(myList.Last.Prev.Data);
-        // Console.WriteLine(myList.Length);
+        Console.WriteLine(myList.BeginningRemove());
+
+
+        myList.ShowList();
     }
 }
 
@@ -111,4 +115,33 @@ public class MyList
 
         this.Length++;
     }
+
+    public int BeginningRemove()
+    {
+        int returnData;
+
+        if (this.Length == 0)
+        {
+            return -1;
+        }
+        else if (this.Length == 1)
+        {
+            returnData = this.First.Data;
+
+            this.First.Prev = null;
+        }
+        else
+        {
+            returnData = this.First.Data;
+
+            this.First = this.First.Next;
+            this.First.Prev = null;
+        }
+
+        this.Length--;
+
+        return returnData;
+    }
+    
+    
 }

@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cDSZSe++WmPL3KNc/qr7Hy54AHXXTmaxPt8F3wCWqJmELSUYAiOJpf6OmzOjt2vdLgJbmUm4DKpkH1iPyKpPFw==",
+  "dgSpecHash": "Vq54HLYZse7gke0k/FfvRWnbdF6qz2ODa2BBl1z+ERJmAw7l24A2aSUw/Alpsh+d6Uglkrr7L5NCgN3qA/tBAg==",
   "success": true,
-  "projectFilePath": "/home/douglas/Documentos/dev/C#/List/List.csproj",
-  "expectedPackageFiles": [
-    "/home/douglas/.nuget/packages/microsoft.netcore.app.ref/6.0.7/microsoft.netcore.app.ref.6.0.7.nupkg.sha512",
-    "/home/douglas/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.7/microsoft.aspnetcore.app.ref.6.0.7.nupkg.sha512",
-    "/home/douglas/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.7/microsoft.netcore.app.host.linux-x64.6.0.7.nupkg.sha512"
-  ],
+  "projectFilePath": "/workspaces/List/List.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
