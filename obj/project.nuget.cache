@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+naj516MG0euhv9NFJzHy5Np+HrC5OhdLtOFIYC2BrmzCK6Lthy3fYcWYfw3GQrQmqZao65Rj6bLfSGOTVHPDw==",
+  "dgSpecHash": "Vq54HLYZse7gke0k/FfvRWnbdF6qz2ODa2BBl1z+ERJmAw7l24A2aSUw/Alpsh+d6Uglkrr7L5NCgN3qA/tBAg==",
   "success": true,
-  "projectFilePath": "/home/douglas/Documentos/dev/C#/List/List.csproj",
+  "projectFilePath": "/workspaces/List/List.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

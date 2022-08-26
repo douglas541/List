@@ -9,17 +9,9 @@ public class Program
         MyList myList = new MyList();
 
         myList.BeginningInsertion(1);
-        // myList.BeginningInsertion(2);
-        // myList.EndInsertion(4);
-        // myList.BeginningInsertion(3);
+        myList.BeginningInsertion(2);
 
-        // myList.ShowList();
-
-        // Console.WriteLine(myList.BeginningRemove());
-        // Console.WriteLine(myList.BeginningRemove());
-        // Console.WriteLine(myList.BeginningRemove());
-
-        // Console.WriteLine(myList.First);
+        // Console.WriteLine(myList.Contains(3));
 
         // myList.ShowList();
     }
@@ -175,5 +167,31 @@ public class MyList
         this.Length--;
 
         return returnData;
+    }
+
+    public bool Contains(int data)
+    {
+        Node nodeAux;
+
+        if (this.Length == 0)
+        {
+            return false;
+        }
+        else
+        {
+            nodeAux = this.First;
+
+            for (int i = 0; i < this.Length; i++)
+            {
+                if (nodeAux.Data == data)
+                {
+                    return true;
+                }
+
+                nodeAux = nodeAux.Next;
+            }
+        }
+
+        return false;
     }
 }

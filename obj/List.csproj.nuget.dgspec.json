@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/douglas/Documentos/dev/C#/List/List.csproj": {}
+    "/workspaces/List/List.csproj": {}
   },
   "projects": {
-    "/home/douglas/Documentos/dev/C#/List/List.csproj": {
+    "/workspaces/List/List.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/douglas/Documentos/dev/C#/List/List.csproj",
+        "projectUniqueName": "/workspaces/List/List.csproj",
         "projectName": "List",
-        "projectPath": "/home/douglas/Documentos/dev/C#/List/List.csproj",
-        "packagesPath": "/home/douglas/.nuget/packages/",
-        "outputPath": "/home/douglas/Documentos/dev/C#/List/obj/",
+        "projectPath": "/workspaces/List/List.csproj",
+        "packagesPath": "/var/nuget",
+        "outputPath": "/workspaces/List/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/douglas/.nuget/NuGet/NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -43,8 +43,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -53,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/dotnet/6.0.301/sdk/6.0.301/RuntimeIdentifierGraph.json"
         }
       }
     }
