@@ -6,14 +6,16 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        MyList myList = new MyList();
+        MyList List = new MyList();
 
-        myList.BeginningInsertion(1);
-        myList.BeginningInsertion(2);
+        List.BeginningInsertion(1);
+        List.BeginningInsertion(2);
 
-        // Console.WriteLine(myList.Contains(3));
+        // Console.WriteLine(List.Contains(3));
 
-        // myList.ShowList();
+        Console.WriteLine(List.Length());
+
+        // List.ShowList();
     }
 }
 
@@ -35,29 +37,29 @@ public class Node
 
 public class MyList
 {
-    public int Length { get; set; }
-    public Node First { get; set; }
-    public Node Last { get; set; }
+    private int _length { get; set; }
+    private Node _first { get; set; }
+    private Node _last { get; set; }
 
     public MyList()
     {
-        Length = 0;
-        First = null;
-        Last = null;
+        _length = 0;
+        _first = null;
+        _last = null;
     }
 
     public void ShowList()
     {
-        var nodeAux = this.First;
+        var nodeAux = this._first;
 
-        for (var i = 0; i < this.Length; i++)
+        for (var i = 0; i < this._length; i++)
         {
             Console.Write($"{nodeAux.Data} ");
 
             nodeAux = nodeAux.Next;
         }
 
-        if (this.Length != 0)
+        if (this._length != 0)
         {
             Console.WriteLine();
         }
@@ -70,22 +72,22 @@ public class MyList
         insertNode.Data = data;
         insertNode.Next = null;
 
-        if (this.Length == 0)
+        if (this._length == 0)
         {
             insertNode.Prev = null;
 
-            this.First = insertNode;
-            this.Last = insertNode;
+            this._first = insertNode;
+            this._last = insertNode;
         }
         else
         {
-            insertNode.Prev = this.Last;
-            this.Last.Next = insertNode;
+            insertNode.Prev = this._last;
+            this._last.Next = insertNode;
 
-            this.Last = insertNode;
+            this._last = insertNode;
         }
 
-        this.Length++;
+        this._length++;
     }
 
     public void BeginningInsertion(int data)
@@ -95,48 +97,48 @@ public class MyList
         insertNode.Data = data;
         insertNode.Prev = null;
 
-        if (this.Length == 0)
+        if (this._length == 0)
         {
             insertNode.Next = null;
 
-            this.First = insertNode;
-            this.Last = insertNode;
+            this._first = insertNode;
+            this._last = insertNode;
         }
         else
         {
-            insertNode.Next = this.First;
-            this.First.Prev = insertNode;
+            insertNode.Next = this._first;
+            this._first.Prev = insertNode;
 
-            this.First = insertNode;
+            this._first = insertNode;
         }
 
-        this.Length++;
+        this._length++;
     }
 
     public int BeginningRemove()
     {
         int returnData;
 
-        if (this.Length == 0)
+        if (this._length == 0)
         {
             return -1;
         }
-        else if (this.Length == 1)
+        else if (this._length == 1)
         {
-            returnData = this.First.Data;
+            returnData = this._first.Data;
 
-            this.First = null;
-            this.Last = null;
+            this._first = null;
+            this._last = null;
         }
         else
         {
-            returnData = this.First.Data;
+            returnData = this._first.Data;
 
-            this.First = this.First.Next;
-            this.First.Prev = null;
+            this._first = this._first.Next;
+            this._first.Prev = null;
         }
 
-        this.Length--;
+        this._length--;
 
         return returnData;
     }
@@ -145,26 +147,26 @@ public class MyList
     {
         int returnData = 0;
 
-        if (this.Length == 0)
+        if (this._length == 0)
         {
             return -1;
         }
-        else if (this.Length == 1)
+        else if (this._length == 1)
         {
-            returnData = this.Last.Data;
+            returnData = this._last.Data;
 
-            this.First = null;
-            this.Last = null;
+            this._first = null;
+            this._last = null;
         }
         else
         {
-            returnData = this.Last.Data;
+            returnData = this._last.Data;
 
-            this.Last = this.Last.Prev;
-            this.Last.Next = null;
+            this._last = this._last.Prev;
+            this._last.Next = null;
         }
 
-        this.Length--;
+        this._length--;
 
         return returnData;
     }
@@ -173,15 +175,15 @@ public class MyList
     {
         Node nodeAux;
 
-        if (this.Length == 0)
+        if (this._length == 0)
         {
             return false;
         }
         else
         {
-            nodeAux = this.First;
+            nodeAux = this._first;
 
-            for (int i = 0; i < this.Length; i++)
+            for (int i = 0; i < this._length; i++)
             {
                 if (nodeAux.Data == data)
                 {
@@ -193,5 +195,10 @@ public class MyList
         }
 
         return false;
+    }
+
+    public int Length()
+    {
+        return this._length;
     }
 }
